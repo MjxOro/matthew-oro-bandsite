@@ -1,0 +1,112 @@
+//Fonts
+@font-face{
+	font-family:'avenir';
+	src: url(../../assets/Font/AvenirNextLTPro-Regular.otf);
+	font-weight: 400;
+}
+@font-face{
+	font-family:'avenir';
+	src: url(../../assets/Font/AvenirNextLTPro-Demi.otf);
+	font-weight: 600;
+}
+@font-face{
+	font-family:'avenir';
+	src: url(../../assets/Font/AvenirNextLTPro-Bold.otf);
+	font-weight: 700;
+}
+
+//colors
+$bsBlack: #323232;
+$bsDblack: #000000;
+$silver: #AFAFAF;
+$white: #FFFFFF;
+$mercury: #E1E1E1;
+$alabaster: #FAFAFA;
+
+//padding 
+$dskTbBheadline: 3rem;
+$dskTbAheadline: 2.25rem;
+$dskTbBc: 2.25rem;
+$mbleBheadline: 1.5rem;
+$mbleAheadline: 1rem;
+$mbleBc: 1rem;
+
+//mixins
+@mixin dtPageHeader(){
+	font-size: 3.75rem;
+	line-height: 4.25rem;
+	font-weight: 700;
+}
+@mixin dtSectionHeader(){
+	font-size: 2.25rem;
+	line-height: 2.75rem;
+	font-weight: 700;
+}
+@mixin dtSubHeader(){
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: 600;
+}
+@mixin dtBodyCopy(){
+	font-size: 0.875rem;
+	line-height: 1.375rem;
+	font-weight: 400;
+}
+@mixin dtFooterCopy(){
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 400;
+}
+@mixin dtLabelButtons(){
+	font-size: 0.75rem;
+	line-height: 1.25rem;
+	font-weight: 700;
+}
+@mixin mPageHeader(){
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: 700;
+}
+@mixin mSectionHeader(){
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-weight: 700;
+}
+@mixin mSubHeader(){
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 600;
+}
+@mixin mBodyCopy(){
+	font-size: 0.813rem;
+	line-height: 1.125rem;
+	font-weight: 400;
+}
+@mixin mFooterCopy(){
+	font-size: 0.813rem;
+	line-height: 1.125rem;
+	font-weight: 400;
+}
+@mixin mLabelButtons(){
+	font-size: 0.625rem;
+	line-height: 1.25rem;
+	font-weight: 700;
+}
+@mixin mobile(){
+	@media (min-width:320px){
+		@content;
+	}
+}
+@mixin tablet(){
+	@media (min-width:768px){
+		@content;
+	}
+}
+@mixin desktop(){
+	@media (min-width:1280px){
+		@content;
+	}
+}
+
+
+	
