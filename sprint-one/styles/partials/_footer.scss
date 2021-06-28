@@ -1,0 +1,132 @@
+@use 'variables' as *;
+@use 'globals';
+
+//styles
+footer{
+	background-color: $bsBlack;
+	padding: 0 1rem;
+	color: $white;
+	@include tablet(){
+		padding: 0 2.25rem;
+	}
+	.ft{
+		display:flex;
+		flex-flow: row wrap;
+		min-width: 100%;
+		@include tablet(){
+			flex-flow: row wrap;
+			width:100%;
+		}
+		@include desktop(){
+			padding: 0 5.438rem;
+		}
+
+		&__social{
+			display:flex;
+			margin: 0;
+			padding: 1.5rem 1rem 1rem 0;
+			align-items: center;
+			width: 100%;
+			@include mSectionHeader();
+			@include tablet(){
+				@include dtSubHeader();
+				justify-content: flex-start;
+				width:30%;
+				order:0;
+			}
+			@include desktop(){
+				width:25%;
+			}
+		}
+		
+		&__icon{
+			margin: 0;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			width:100%;
+			@include tablet(){
+				justify-content: center;
+				width:40%;
+			}
+			@include desktop(){
+				justify-content: flex-start;
+			}
+			&__img{
+				margin-right:1rem;
+				@include tablet(){
+					margin-right:3rem;
+					order:2;
+				}
+			}
+		}
+		
+
+		&__info{
+			@include tablet(){
+				display:flex;
+				order:2;
+				justify-content: space-between;
+				width:100%
+			}
+			@include desktop(){
+				justify-content: flex-start;
+				width:74%
+			}
+			&__bl{
+				@include mFooterCopy();
+				@include tablet(){
+					@include dtFooterCopy();
+				}
+				@include desktop(){
+					margin-right: auto;
+				}
+				
+				&__label{
+					padding: 1rem 0;
+					margin:0;
+
+					&__p{
+						margin:0;
+					}
+				}
+				&__location{
+					margin: 0;
+					&__p{
+					margin: 0;
+					}
+				}
+				&__email{
+					&__text{
+						text-decoration: none;
+						color:$white;
+					}
+				}
+			}
+		}
+		&__logo{
+			max-height: 1.25rem;
+			padding: 0;
+			align-self: flex-start;
+			margin: 3rem 100% 1rem 0;
+			width: 100%;
+			@include tablet(){
+				width: auto;
+				order:1;
+				margin: 0 0 0 auto;
+				align-self: center;
+			}
+
+		}
+		&__copyright{
+			margin:0 0 1rem 0;
+			@include mFooterCopy();
+			@include tablet(){
+				@include dtFooterCopy();
+				margin: 2.25rem auto 2.25rem 0;
+				order:3;
+				width:100%;
+			}
+		}
+	}
+}
