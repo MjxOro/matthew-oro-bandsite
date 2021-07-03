@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BandSite</title>
-	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+	<link rel="stylesheet" type="text/css" href="./styles/bio.css">
 </head>
 <body>
 
@@ -64,6 +64,29 @@
 		</div>
 	</section>
 
+	<section class="chat">
+		<form class="chat__form" id="commentForm">
+			<h1 class="chat__heading">Join the Conversation</h1>
+			<div class="chat__user">
+				<div class="chat__user__img"></div>
+				<div class="chat__user__input-container">
+					<label class="chat__user__label">NAME</label>
+					<input name="inputUsername" id="usernameInputbox" type="text" class="chat__user__input" placeholder="Enter your name" />
+				</div>
+			</div>
+			<div class="chat__comment">
+				<div class="chat__comment__space"></div>
+				<div class="chat__comment__input-container">
+					<label name="inputComment" class="chat__comment__label">COMMENT</label>
+					<textarea id="commentInputbox" cols="20" rows="10" class="chat__comment__txtarea" placeholder="Enter your name" ></textarea>
+					<button class="chat__comment__btn">COMMENT</button>
+				</div>
+			</div>
+		</form>
+		<div id="chatID" class="chat__post-parent">
+		</div>
+	</section>
+
 	<footer>
 		<div class="ft">
 			<h2 class="ft__social">Get in Touch</h2>
@@ -119,4 +142,5 @@
 	</footer>
 
 </body>
+<script src="./scripts/index-pages.js"></script>
 </html>

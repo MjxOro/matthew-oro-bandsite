@@ -22,6 +22,7 @@ $silver: #AFAFAF;
 $white: #FFFFFF;
 $mercury: #E1E1E1;
 $alabaster: #FAFAFA;
+$borderError: #D22D2D;
 
 //padding 
 $dskTbBheadline: 3rem;
@@ -92,6 +93,7 @@ $mbleBc: 1rem;
 	line-height: 1.25rem;
 	font-weight: 700;
 }
+//Media
 @mixin mobile(){
 	@media (min-width:320px){
 		@content;
@@ -103,10 +105,91 @@ $mbleBc: 1rem;
 	}
 }
 @mixin desktop(){
-	@media (min-width:1280px){
+	@media (min-width:1280px) and (max-width:1920px){
 		@content;
 	}
 }
-
-
-	
+//Bio Page Comment mixins
+@mixin mFormFieldBorderNeutral(){
+	border: 0.0625rem solid $mercury; 
+	border-radius: 0.25rem;
+	min-height:2rem;
+	max-width:100%;
+	padding: 0.75rem;
+	margin-top: 0.25rem;
+}
+@mixin mFormFieldBorderActive(){
+	border: 0.0625rem solid $bsBlack; 
+	border-radius: 0.25rem;
+	min-height:2rem;
+	max-width:100%;
+	padding: 0.75rem;
+	margin-top: 0.25rem;
+}
+@mixin mFormFieldBorderError(){
+	border: 0.0625rem solid $borderError; 
+	border-radius: 0.25rem;
+	min-height:2rem;
+	max-width:100%;
+	padding: 0.75rem;
+	margin-top: 0.25rem;
+}
+@mixin dtFormFieldBorderNeutral(){
+	border: 0.0625rem solid $mercury; 
+	border-radius: 0.25rem;
+	min-height:3.5rem;
+	max-width:100%;
+	padding: 1rem;
+	margin-top: 0.25rem;
+}
+@mixin dtFormFieldBorderActive(){
+	border: 0.0625rem solid $bsBlack; 
+	border-radius: 0.25rem;
+	min-height:3.5rem;
+	max-width:100%;
+	padding: 1rem;
+	margin-top: 0.25rem;
+}
+@mixin dtFormFielBorderError(){
+	border: 0.0625rem solid $borderError; 
+	border-radius: 0.25rem;
+	min-height:3.5rem;
+	max-width:100%;
+	padding: 1rem;
+	margin-top: 0.25rem;
+}
+//Profile picture
+@mixin dtProfilePicture(){
+	min-height:3rem;
+	min-width:3rem;
+	max-height:3rem;
+	max-width:3rem;
+	background-color: $mercury;
+	border-radius: 50%;
+}
+@mixin mProfilePicture(){
+	min-height:2.25rem;
+	min-width:2.25rem;
+	max-height:2.25rem;
+	max-width:2.25rem;
+	background-color: $mercury;
+	border-radius: 50%;
+}
+//Button
+@mixin mBtnProperties(){
+	height: 2.5rem;
+	padding: 0 2rem;
+	border-radius: 0.25rem;
+	color: $white;
+	background-color: $bsBlack;
+	width:100%;
+}
+@mixin dtBtnProperties(){
+	height: 2.5rem;
+	min-width:9.375rem;
+	padding: 0 2rem;
+	border-radius: 0.25rem;
+	color: $white;
+	background-color: $bsBlack;
+	width:100%;
+}

@@ -191,3 +191,107 @@
 		}
 	}
 }
+.chat{
+	padding: 0 1rem;
+	&__heading{
+	}
+	&__user{
+		display: flex;
+		align-items: flex-end;
+		box-sizing: border-box;
+		margin-bottom: 1rem;
+		&__img{
+			@include mProfilePicture();
+			margin-right: 1rem;
+			background-image: url("../assets/Images/Mohan-muruge.jpg");
+			background-position:14% center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		&__input-container{
+			flex-grow: 1;
+
+			& .chat__user__label{
+				display:block;
+				@include mLabelButtons();
+			}
+			& .chat__user__input{
+				@include mFormFieldBorderNeutral();
+				width:100%;
+				background-color: $alabaster;
+			}
+			& .chat__user__input--error{
+				border-color: $borderError;
+			}
+			& .chat__user__input:focus{
+				outline-color: $bsBlack;
+			}
+		}
+	}
+	&__comment{
+			padding-left: 3.25rem;
+
+		&__input-container{
+			flex-grow: 1;
+		
+			& .chat__comment__label{
+				@include mLabelButtons();
+				display:block;
+			}
+			& .chat__comment__txtarea{
+				font-family: 'avenir';
+				@include mFormFieldBorderNeutral();
+				height: calc(1vh + (25vw));
+				width:100%;
+				background-color: $alabaster;
+				margin-bottom: 1rem;
+				resize: none;
+			}
+			& .chat__comment__txtarea--error{
+				border-color: $borderError;
+			}
+			& .chat__comment__txtarea:focus{
+				outline-color: $bsBlack;
+			}
+			& .chat__comment__btn{
+				@include mBtnProperties();
+				outline: none;
+				border: none;
+				cursor: pointer;
+			}
+			& .chat__comment__btn:hover{
+				background-color: $bsDblack;
+			}
+		}
+	}
+	&__post{
+		display: flex;
+
+			&__img{
+			@include mProfilePicture();
+			margin-right: 1rem;
+			margin-top: 0.5rem;
+			}
+	
+			&__cont{
+				&__user{
+					display:flex;
+					justify-content: space-between;
+					align-items: center;
+					&__name{
+						@include mSubHeader();
+					}
+					&__time{
+						@include mBodyCopy();
+						color: $mercury;
+					}
+				}
+			}
+			&__comment{
+				@include mBodyCopy();
+				color: $bsBlack;
+				margin-bottom: 1rem;
+			}
+	}
+}
+
