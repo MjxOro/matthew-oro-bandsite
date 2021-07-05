@@ -1,0 +1,135 @@
+@use './variables' as *;
+@use './globals';
+
+//styles
+.hd{
+	background-color: $bsBlack;
+	align-items: center;
+	width:100%;
+
+	&__nav{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+
+		@include tablet(){
+			display:flex;
+			flex-direction: row;
+			padding: 0 2.25rem;
+			margin: 0 auto;
+		}
+		@include desktop(){
+			margin: 0 auto;
+			padding: 0 5.438rem;
+		}
+		&__logo{
+			margin-top: 0.5rem;
+			@include tablet(){
+				margin: 1rem 0;
+			}
+		}
+		&__pages{
+			display: flex;
+			justify-content: space-between;
+			width:100%;
+
+			@include tablet(){
+				justify-content: flex-start;
+				width: 25%;
+				align-items: center;
+				margin:0 2rem;
+			}
+
+			&__link{
+				text-decoration: none;
+				color: $silver;
+				flex-grow: 1;
+				text-align: center;
+				margin-bottom: 0.5rem;
+				@include mLabelButtons();
+				@include tablet(){
+					margin:0;
+					flex-grow: 0;
+					text-align: left;
+					margin-right: 2rem;
+					@include dtLabelButtons()
+				}
+			}
+			&__link--active{
+				color:$white;
+				text-decoration: none;
+			}
+			&__underline{
+				position:absolute;
+				background-color: $white;
+				height:0.25rem;
+				top:3.45rem;
+				width:50%;
+				left:50%;
+				z-index: 0;
+				transition: all 450ms ease 0ms;
+				@include tablet(){
+					height:0.25rem;
+					top:3.20rem;
+					left:16.5rem;
+					width: 3.7rem;
+				}
+				@include desktop(){
+					width: 3.25rem;
+					left: 19.35rem;
+				}
+			}
+			&__link:nth-child(1){
+				width:50%;
+				@include tablet(){
+					width:3.7rem;
+				}
+				@include desktop(){
+					width: 3.25rem;
+				}
+			}
+			&__link:nth-child(1):hover~&__underline{
+				width:50%;
+				left:0;
+				@include tablet(){
+					width:3.45rem;
+					left:11.5rem;
+				}
+				@include desktop(){
+					width: 3.25rem;
+					left:14.5rem;
+				}
+			}
+			&__link:nth-child(2){
+				width:50%;
+				@include tablet(){
+					width:3.45rem;
+				}
+				@include desktop(){
+					left:14.5rem;
+				}
+			}
+			&__link:nth-child(2):hover~&__underline{
+				width:50%;
+				transform:translateX(100%);
+				left:0;
+				@include tablet(){
+					width:3.7rem;
+					left:11.5rem;
+					transform: translateX(5rem);
+				}
+				@include desktop(){
+					width: 3.1rem;
+					left:14.5rem;
+					transform: translateX(5rem);
+				}
+			}
+			&__link:hover{
+				color:$white;
+			}
+		}
+
+	}
+}
+

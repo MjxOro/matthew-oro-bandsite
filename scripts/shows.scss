@@ -1,0 +1,140 @@
+@use './partials/variables' as *;
+@use './partials/globals';
+@use './partials/headerP';
+@use './partials/footer';
+
+//styles
+.hero{
+	box-sizing: border-box; background-image: url("../assets/Images/hero-shows.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 20%;
+	max-width: 100%;
+	position: relative;
+	@include tablet(){
+		height: 30%;
+	}
+	@include desktop(){
+		height: 35%;
+	}
+
+	&__cover{
+		display:flex;
+		flex-direction:column;
+		padding: 0 1rem;
+		align-items: flex-start;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(50, 50, 50, 0.5);
+		@include tablet(){
+			padding: 0 2.25rem;
+		}
+		@include desktop(){
+			padding: 5.438rem;
+			justify-content: center;
+		}
+		&__text{
+			@include mSubHeader();
+			margin: 0;
+			padding: 1rem 0;
+			color: $white;
+			@include tablet(){
+				padding: 2.25rem 0;
+				@include dtSubHeader();
+			}
+		}
+		&__container{
+			width:100%;
+			@include desktop(){
+				display:flex;
+			}
+	
+			& .hero__cover__title{
+				margin: 1rem 0;
+				color:$white;
+				width: 50%;
+				@include mPageHeader();
+				@include tablet(){
+					padding: 2.25rem 0;
+					@include dtPageHeader();
+				}
+				@include desktop(){
+					margin: 0;
+					padding: 0;
+					width: 75%;
+				}
+			}
+		}
+	}
+}
+.show{
+	padding: 1rem;
+	&__container{
+		&__date{
+			& .show__container__info-top{
+				@include mBodyCopy();
+				color: $silver;
+				padding-top:1rem;
+				@include tablet(){
+					@include dtBodyCopy();
+				}
+			}
+			& .show__container__info-top{
+				border-top: 0.0625rem solid $mercury;
+			}
+			& .show__container__info-bot{
+				@include mBodyCopy();
+				color: $bsBlack;
+				@include tablet(){
+					@include dtBodyCopy();
+				}
+
+			}
+			& .show__container__info-bot{
+				font-weight:bold;
+			}
+	}
+		&__date{
+			& .show__container__info-top{
+				@include mBodyCopy();
+				color: $silver;
+				padding-top:1rem;
+				@include tablet(){
+					@include dtBodyCopy();
+				}
+			}
+			& .show__container__info-top{
+				border-top: 0.0625rem solid $mercury;
+			}
+			& .show__container__info-bot{
+				@include mBodyCopy();
+				color: $bsBlack;
+				@include tablet(){
+					@include dtBodyCopy();
+				}
+
+			}
+			& .show__container__info-bot{
+				font-weight:bold;
+			}
+	}
+		&__btn{
+			@include mBtnProperties();
+			outline: none;
+			cursor: pointer;
+			@include tablet(){
+			@include dtBtnProperties();
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+}
