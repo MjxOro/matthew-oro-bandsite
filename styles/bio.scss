@@ -194,7 +194,16 @@
 .chat{
 	padding: 0 1rem;
 	@include tablet(){
-		padding: 0 2rem;
+			margin: 0 2.25rem;
+			padding: 0 1.5rem;
+	}
+	@include desktop(){
+		padding: 3rem 5.438rem 2.25rem 5.438rem;
+		margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 	}
 
 	&__heading{
@@ -206,13 +215,18 @@
 			margin-top: 3rem;
 			margin-bottom: 2rem;
 		}
+		@include desktop(){
+			align-self: flex-start;
+		}
 
 	}
+
 	&__user{
 		display: flex;
 		align-items: flex-end;
 		box-sizing: border-box;
-		margin-bottom: 1rem;
+		margin: 0 auto 0 1rem auto;
+
 		&__img{
 			@include mProfilePicture();
 			margin-right: 1rem;
@@ -220,18 +234,31 @@
 			background-position:14% center;
 			background-size: cover;
 			background-repeat: no-repeat;
+			@include tablet(){
+				@include dtProfilePicture
+			}
 		}
+
 		&__input-container{
 			flex-grow: 1;
 
 			& .chat__user__label{
 				display:block;
 				@include mLabelButtons();
+				@include tablet(){
+					@include dtLabelButtons();
+				}
 			}
 			& .chat__user__input{
 				@include mFormFieldBorderNeutral();
 				width:100%;
 				background-color: $alabaster;
+				@include tablet(){
+					@include dtFormFieldBorderNeutral();
+				}
+				@include desktop(){
+					width: 45rem;
+				}
 			}
 			& .chat__user__input--error{
 				border-color: $borderError;
@@ -245,21 +272,43 @@
 			padding-left: 3.25rem;
 			display: flex;
 			justify-content: flex-end; 
+			@include tablet(){
+				padding-left: 4rem;
+			}
+			@include desktop(){
+				width: 49rem;
+			}
+			
 		&__input-container{
-			flex-grow: 1;
+				flex-grow: 1;
+			@include tablet(){
+				display:flex;
+				flex-direction: column;
+			}
+
+
 		
 			& .chat__comment__label{
 				@include mLabelButtons();
 				display:block;
+				margin-top: 1rem;
+				@include tablet(){
+					@include dtLabelButtons();
+					margin-top: 1.5rem
+				}
 			}
 			& .chat__comment__txtarea{
 				font-family: 'avenir';
 				@include mFormFieldBorderNeutral();
-				height: 15vh;
 				width:100%;
+				height:10rem;
 				background-color: $alabaster;
 				margin-bottom: 1rem;
 				resize: none;
+				@include tablet(){
+					height:8rem;
+					@include dtFormFieldBorderNeutral();
+				}
 			}
 			& .chat__comment__txtarea--error{
 				border-color: $borderError;
@@ -272,6 +321,11 @@
 				outline: none;
 				border: none;
 				cursor: pointer;
+				@include tablet(){
+					@include dtBtnProperties();
+					width:20%;
+					align-self:flex-end;
+				}
 			}
 			& .chat__comment__btn:hover{
 				background-color: $bsDblack;
@@ -279,19 +333,32 @@
 		}
 	}
 	& .chat__post-parent{
+		margin-bottom: 1rem;
 		display: flex;
 		flex-direction: column-reverse;
+		@include tablet(){
+			margin-bottom:2.25rem;
+		}
+		@include desktop(){
+			width:49rem;
+		}
 
 			& .chat__post{
 				display: flex;
 				flex-direction: row;
 				border-top: 0.0625rem solid $mercury;
 				margin-top: 1rem;
+				@include tablet(){
+					margin-top:	2.25rem;
+				}
 
 					&__img{
 					@include mProfilePicture();
 					margin-right: 1rem;
 					margin-top: 0.5rem;
+					@include tablet(){
+						@include dtProfilePicture();
+						}
 					}
 			
 					&__cont{
@@ -302,10 +369,16 @@
 								align-items: center;
 								&__name{
 									@include mSubHeader();
+									@include tablet(){
+										@include dtSubHeader();
+									}
 								}
 								&__time{
 									@include mBodyCopy();
 									color: $mercury;
+									@include tablet(){
+										@include dtBodyCopy();
+									}
 								}
 							}
 						}
@@ -313,6 +386,10 @@
 							@include mBodyCopy();
 							color: $bsBlack;
 							margin-bottom: 1rem;
+							@include tablet(){
+								margin-bottom: 2rem;
+								@include dtBodyCopy();
+							}
 						}
 					}
 	}
