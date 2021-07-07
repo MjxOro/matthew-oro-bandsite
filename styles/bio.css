@@ -52,7 +52,7 @@ body {
     margin: 0 auto;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .hd__nav {
     margin: 0 auto;
     padding: 0 5.438rem;
@@ -120,7 +120,7 @@ body {
     width: 3.7rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .hd__nav__pages__underline {
     width: 3.25rem;
     left: 14.5rem;
@@ -134,7 +134,7 @@ body {
     width: 3.7rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .hd__nav__pages__link:nth-child(1) {
     width: 3.25rem;
   }
@@ -149,7 +149,7 @@ body {
     left: 11.5rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .hd__nav__pages__link:nth-child(1):hover ~ .hd__nav__pages__underline {
     width: 3.25rem;
     left: 14.5rem;
@@ -163,7 +163,7 @@ body {
     width: 3.45rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .hd__nav__pages__link:nth-child(2) {
     left: 14.5rem;
   }
@@ -180,7 +180,7 @@ body {
     transform: translateX(5rem);
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .hd__nav__pages__link:nth-child(2):hover ~ .hd__nav__pages__underline {
     width: 3.1rem;
     left: 14.5rem;
@@ -212,7 +212,7 @@ footer .ft {
     width: 100%;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   footer .ft {
     padding: 0 5.438rem;
   }
@@ -237,7 +237,7 @@ footer .ft__social {
     order: 0;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   footer .ft__social {
     width: 25%;
   }
@@ -255,7 +255,7 @@ footer .ft__icon {
     width: 40%;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   footer .ft__icon {
     justify-content: flex-start;
   }
@@ -277,7 +277,7 @@ footer .ft__icon__img {
     width: 100%;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   footer .ft__info {
     justify-content: flex-start;
     width: 74%;
@@ -295,7 +295,7 @@ footer .ft__info__bl {
     font-weight: 400;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   footer .ft__info__bl {
     margin-right: auto;
   }
@@ -349,24 +349,98 @@ footer .ft__copyright {
   }
 }
 
+@keyframes inputWrong {
+  0% {
+    transform: translateX(0.25rem);
+  }
+  25% {
+    transform: translateX(-0.25rem);
+  }
+  50% {
+    transform: translateX(0.25rem);
+  }
+  75% {
+    transform: translateX(-0.25rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes inputMove {
+  0% {
+    transform: translateY(-12rem);
+  }
+  10% {
+    transform: translateY(-11rem);
+  }
+  15% {
+    transform: translateY(-8.5rem);
+  }
+  20% {
+    transform: translateY(-5.5rem);
+  }
+  25% {
+    transform: translateY(-2.5rem);
+  }
+  30% {
+    transform: translateY(0rem);
+  }
+  35% {
+    transform: translateY(0rem);
+  }
+  40% {
+    transform: translateY(0rem);
+  }
+  45% {
+    transform: translateY(-2rem);
+  }
+  50% {
+    transform: translateY(-2.5rem);
+  }
+  55% {
+    transform: translateY(-2.5rem);
+  }
+  60% {
+    transform: translateY(-2.3rem);
+  }
+  65% {
+    transform: translateY(-1rem);
+  }
+  70% {
+    transform: translateY(0rem);
+  }
+  75% {
+    transform: translateY(0rem);
+  }
+  80% {
+    transform: translateY(-0.5rem);
+  }
+  85% {
+    transform: translateY(-0.85rem);
+  }
+  90% {
+    transform: translateY(-1rem);
+  }
+  95% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
 .hero {
   box-sizing: border-box;
   background-image: url("../assets/Images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 35%;
+  height: 50vw;
   max-width: 100%;
   position: relative;
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .hero {
-    height: 50%;
-  }
-}
-@media (min-width: 1280px) and (max-width: 1920px) {
-  .hero {
-    height: 70%;
+    max-height: 60rem;
   }
 }
 .hero__cover {
@@ -392,7 +466,7 @@ footer .ft__copyright {
     font-weight: 700;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .hero__cover__title {
     padding: 0 5.438rem;
   }
@@ -402,6 +476,13 @@ footer .ft__copyright {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+@media (min-width: 1280px) {
+  .mc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .mc__about {
   padding: 1.5rem 1rem 1rem 1rem;
@@ -418,30 +499,33 @@ footer .ft__copyright {
     font-weight: 700;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .mc__about {
     padding: 3rem 5.438rem 5.438rem 5.438rem;
+    align-self: flex-start;
   }
 }
 .mc__img {
-  margin: 0 1rem;
-  padding: 0;
+  margin: 0;
+  padding: 0 1rem;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .mc__img {
-    margin: 0 2.25rem;
-    padding: 0 1.5rem;
+    padding: 0 3.75rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .mc__img {
-    margin: 0 5.438rem;
-    padding: 0 1.5rem;
+    padding: 0 6rem;
+    max-height: 50rem;
+    max-width: 90rem;
   }
 }
 .mc__img img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-height: 50rem;
+  max-width: 90rem;
 }
 .mc__quote {
   padding: 0 1rem;
@@ -454,18 +538,18 @@ footer .ft__copyright {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
-    margin: 0 2.25rem;
-    padding: 0 1.5rem;
+    margin: 0;
+    padding: 0 3.75rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .mc__quote {
-    margin: 0 5.438rem;
-    padding: 0 1.5rem;
+    padding: 0 6rem;
+    max-height: 50rem;
+    max-width: 90rem;
   }
 }
 .mc__quote-owner {
-  padding: 0 1rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 600;
@@ -475,36 +559,33 @@ footer .ft__copyright {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
-    margin: 0 2.25rem;
-    padding: 0 1.5rem;
+    margin: 0;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .mc__quote-owner {
-    margin: 0 5.438rem;
-    padding: 0 1.5rem;
+    max-height: 50rem;
+    max-width: 90rem;
   }
 }
 .mc__desc-title {
   margin: 2rem 0 0 0;
   padding: 0 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 600;
 }
 @media (min-width: 768px) {
   .mc__desc-title {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
-    margin: 2.25rem 2.25rem 0 2.25rem;
-    padding: 0 1.5rem;
+    padding: 2.25rem 3.75rem 0 3.75rem;
+    margin: 0;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .mc__desc-title {
-    margin: 5.438rem 5.438rem 0 5.438rem;
-    padding: 0 1.5rem;
+    padding: 6rem 6rem 0 6rem;
+    max-height: 50rem;
+    max-width: 90rem;
   }
 }
 .mc__desc {
@@ -526,10 +607,12 @@ footer .ft__copyright {
     font-weight: 400;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .mc__desc {
-    margin: 0 5.438rem;
-    padding: 0 1.5rem;
+    margin: 0 auto;
+    padding: 0 6rem;
+    max-height: 50rem;
+    max-width: 90rem;
   }
 }
 .mc__desc__p {
@@ -541,7 +624,7 @@ footer .ft__copyright {
     margin: 2.25rem 0;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .mc__desc__p {
     width: 40%;
   }
@@ -556,7 +639,7 @@ footer .ft__copyright {
     padding: 0 2.25rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .gallery {
     padding: 0 5.438rem;
   }
@@ -576,7 +659,7 @@ footer .ft__copyright {
     padding: 3rem 2.25rem 2.25rem 0;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .gallery__title {
     padding: 3rem 5.438rem 2.25rem 0;
   }
@@ -596,7 +679,7 @@ footer .ft__copyright {
     margin: 0 auto 1rem auto;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .gallery__photo__img {
     max-width: 31%;
     margin: 0 auto 2rem auto;
@@ -612,7 +695,7 @@ footer .ft__copyright {
     padding: 0 1.5rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .chat {
     padding: 3rem 5.438rem 2.25rem 5.438rem;
     margin: auto;
@@ -637,7 +720,7 @@ footer .ft__copyright {
     margin-bottom: 2rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .chat__heading {
     align-self: flex-start;
   }
@@ -707,13 +790,16 @@ footer .ft__copyright {
     margin-top: 0.25rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .chat__user__input-container .chat__user__input {
     width: 45rem;
   }
 }
 .chat__user__input-container .chat__user__input--error {
   border-color: #D22D2D;
+  animation-name: inputWrong;
+  animation-duration: 550ms;
+  animation-timing-function: ease-in;
 }
 .chat__user__input-container .chat__user__input:focus {
   outline-color: #323232;
@@ -728,7 +814,7 @@ footer .ft__copyright {
     padding-left: 4rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .chat__comment {
     width: 49rem;
   }
@@ -784,6 +870,9 @@ footer .ft__copyright {
 }
 .chat__comment__input-container .chat__comment__txtarea--error {
   border-color: #D22D2D;
+  animation-name: inputWrong;
+  animation-duration: 550ms;
+  animation-timing-function: ease-in;
 }
 .chat__comment__input-container .chat__comment__txtarea:focus {
   outline-color: #323232;
@@ -819,13 +908,14 @@ footer .ft__copyright {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column-reverse;
+  transition: height 200ms;
 }
 @media (min-width: 768px) {
   .chat .chat__post-parent {
     margin-bottom: 2.25rem;
   }
 }
-@media (min-width: 1280px) and (max-width: 1920px) {
+@media (min-width: 1280px) {
   .chat .chat__post-parent {
     width: 49rem;
   }
@@ -835,6 +925,9 @@ footer .ft__copyright {
   flex-direction: row;
   border-top: 0.0625rem solid #E1E1E1;
   margin-top: 1rem;
+  animation-name: inputMove;
+  animation-duration: 550ms;
+  animation-timing-function: cubic-bezier(0.31, -0.48, 0.52, 1.18);
 }
 @media (min-width: 768px) {
   .chat .chat__post-parent .chat__post {

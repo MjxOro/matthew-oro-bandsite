@@ -37,10 +37,16 @@ function getInfo(event){
 	}
 	else{
 		if(!username.value){
-			username.className = 'chat__user__input chat__user__input--error';
+			username.classList.remove('chat__user__input--error');
+			setTimeout(function(){
+				username.className = 'chat__user__input chat__user__input--error';
+			},30)
 		}
 		if(!comment.value){
-			comment.className = 'chat__comment__txtarea chat__comment__txtarea--error';
+			comment.classList.remove('chat__comment__txtarea--error');
+			setTimeout(function(){
+				comment.className = 'chat__comment__txtarea chat__comment__txtarea--error';
+			},30)
 		}
 		
 	}

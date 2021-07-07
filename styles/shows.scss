@@ -9,14 +9,15 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 20%;
+	height: 25%;
 	max-width: 100%;
 	position: relative;
 	@include tablet(){
-		height: 30%;
+		height: 50%;
 	}
 	@include desktop(){
-		height: 35%;
+		height: 50vw;
+		max-height: 65rem;
 	}
 
 	&__cover{
@@ -70,19 +71,46 @@
 }
 .show{
 	padding: 1rem;
+	@include tablet(){
+		padding: 1rem 2.25rem;
+	}
+	@include desktop(){
+		padding:2rem 6rem;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title{
+		@include desktop(){
+			align-self: flex-start;
+		}
+	}
+
 	&__container{
-		&__date{
-			& .show__container__info-top{
-				@include mBodyCopy();
-				color: $silver;
-				padding-top:1rem;
-				@include tablet(){
-					@include dtBodyCopy();
-				}
+		border-top: 0.0625rem solid $mercury;
+		@include tablet(){
+			display:flex;
+		}
+		@include desktop(){
+			justify-content: center;
+			width:75rem;
+		}
+
+		&__info-top{
+			@include mBodyCopy();
+			color: $silver;
+			padding-top:1rem;
+			width: 25%;
+			margin-right: auto;
+			@include tablet(){
+				@include dtBodyCopy();
+				margin-right:auto;
 			}
-			& .show__container__info-top{
-				border-top: 0.0625rem solid $mercury;
+			@include desktop(){
+				width:100%;
 			}
+
 			& .show__container__info-bot{
 				@include mBodyCopy();
 				color: $bsBlack;
@@ -91,50 +119,35 @@
 				}
 
 			}
-			& .show__container__info-bot{
+			& .show__container__info-bot--bold{
 				font-weight:bold;
 			}
-	}
-		&__date{
-			& .show__container__info-top{
-				@include mBodyCopy();
-				color: $silver;
-				padding-top:1rem;
-				@include tablet(){
-					@include dtBodyCopy();
-				}
-			}
-			& .show__container__info-top{
-				border-top: 0.0625rem solid $mercury;
-			}
-			& .show__container__info-bot{
-				@include mBodyCopy();
-				color: $bsBlack;
-				@include tablet(){
-					@include dtBodyCopy();
-				}
-
-			}
-			& .show__container__info-bot{
-				font-weight:bold;
-			}
-	}
+		}
+	
 		&__btn{
 			@include mBtnProperties();
 			outline: none;
 			cursor: pointer;
+			margin-bottom: 1rem;
 			@include tablet(){
-			@include dtBtnProperties();
+				@include dtBtnProperties();
+				width: 25%;
+				align-self: center;
+				margin-bottom: 0;
+			}
+			@include desktop(){
+				width:45%;
 			}
 		}
 	}
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+

@@ -3,20 +3,98 @@
 @use './partials/header';
 @use './partials/footer';
 
+@keyframes inputWrong {
+    0% {
+        transform: translateX(0.25rem);
+    }
+    25% {
+        transform: translateX(-0.25rem);
+    }
+    50% {
+        transform: translateX(0.25rem);
+    }
+    75% {
+        transform: translateX(-0.25rem);
+    }
+    100% {
+        transform: translateX(0rem);
+    }
+	
+}
+
+@keyframes inputMove {
+    0% {
+        transform: translateY(-12rem);
+    }
+    10% {
+        transform: translateY(-11rem);
+    }
+    15% {
+        transform: translateY(-8.5rem);
+    }
+    20% {
+        transform: translateY(-5.5rem);
+    }
+    25% {
+        transform: translateY(-2.5rem);
+    }
+    30% {
+        transform: translateY(-0rem);
+    }
+    35% {
+        transform: translateY(0rem);
+    }
+    40% {
+        transform: translateY(0rem);
+    }
+    45% {
+        transform: translateY(-2rem);
+    }
+    50% {
+        transform: translateY(-2.5rem);
+    }
+    55% {
+        transform: translateY(-2.5rem);
+    }
+    60% {
+        transform: translateY(-2.3rem);
+    }
+    65% {
+        transform: translateY(-1rem);
+    }
+    70% {
+        transform: translateY(0rem);
+    }
+    75% {
+        transform: translateY(0rem);
+    }
+    80% {
+        transform: translateY(-0.5rem);
+    }
+    85% {
+        transform: translateY(-0.85rem);
+    }
+    90% {
+        transform: translateY(-1rem);
+    }
+    95% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
 //styles
 .hero{
 	box-sizing: border-box; background-image: url("../assets/Images/hero-bio.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 35%;
+	height: 50vw;
 	max-width: 100%;
 	position: relative;
-	@include tablet(){
-		height: 50%;
-	}
 	@include desktop(){
-		height: 70%;
+		max-height: 60rem;
 	}
 
 	&__cover{
@@ -46,6 +124,12 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	@include desktop(){
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	&__about{
 		padding: 1.5rem 1rem 1rem 1rem;
 		margin: 0;
@@ -56,22 +140,26 @@
 		}
 		@include desktop(){
 			padding: 3rem 5.438rem 5.438rem 5.438rem;
+			align-self: flex-start;
 		}
 	}
+
 	&__img{
-		margin: 0 1rem;
-		padding: 0;
+		margin: 0;
+		padding: 0 1rem;
+		width:100%;
 		@include tablet(){
-			margin: 0 2.25rem;
-			padding: 0 1.5rem;
+			padding: 0 3.75rem;
 		}
 		@include desktop(){
-			margin: 0 5.438rem;
-			padding: 0 1.5rem;
+			padding: 0 6rem;
+			max-height: 50rem;
+			max-width: 90rem;
 		}
 		img{
-			max-width:100%;
-			height:auto;
+			width:100%;
+			max-height: 50rem;
+			max-width: 90rem;
 		}
 	}
 	&__quote{
@@ -79,42 +167,40 @@
 		@include mSubHeader;
 		@include tablet(){
 			@include dtSubHeader;
-			margin: 0 2.25rem;
-			padding: 0 1.5rem;
+			margin: 0;
+			padding: 0 3.75rem;
 		}
 		@include desktop(){
-			margin: 0 5.438rem;
-			padding: 0 1.5rem;
+			padding: 0 6rem;
+			max-height: 50rem;
+			max-width: 90rem;
 		}
 
 	}
 	&__quote-owner{
-		padding: 0 1rem;
 		@include mSubHeader;
 		@include tablet(){
 			@include dtSubHeader;
-			margin: 0 2.25rem;
-			padding: 0 1.5rem;
+			margin: 0;
 		}
 		@include desktop(){
-			margin: 0 5.438rem;
-			padding: 0 1.5rem;
+			max-height: 50rem;
+			max-width: 90rem;
 		}
-
 
 	}
 	&__desc-title{
 		margin:2rem 0 0 0;
 		padding: 0 1rem;
-		@include mSubHeader;
 		@include tablet(){
 			@include dtSubHeader;
-			margin: 2.25rem 2.25rem 0 2.25rem;
-			padding: 0 1.5rem;
+			padding: 2.25rem 3.75rem 0 3.75rem;
+			margin:0;
 		}
 		@include desktop(){
-			margin: 5.438rem 5.438rem 0 5.438rem;
-			padding: 0 1.5rem;
+			padding: 6rem 6rem 0 6rem;
+			max-height: 50rem;
+			max-width: 90rem;
 		}
 
 	}
@@ -132,8 +218,10 @@
 			@include dtBodyCopy;
 		}
 		@include desktop{
-			margin: 0 5.438rem;
-			padding: 0 1.5rem;
+			margin: 0 auto;
+			padding: 0 6rem;
+			max-height: 50rem;
+			max-width: 90rem;
 		}
 			&__p{
 				width: 100%;
@@ -262,6 +350,9 @@
 			}
 			& .chat__user__input--error{
 				border-color: $borderError;
+				animation-name: inputWrong;
+				animation-duration: 550ms;
+				animation-timing-function: ease-in;
 			}
 			& .chat__user__input:focus{
 				outline-color: $bsBlack;
@@ -312,6 +403,9 @@
 			}
 			& .chat__comment__txtarea--error{
 				border-color: $borderError;
+				animation-name: inputWrong;
+				animation-duration: 550ms;
+				animation-timing-function: ease-in;
 			}
 			& .chat__comment__txtarea:focus{
 				outline-color: $bsBlack;
@@ -336,6 +430,7 @@
 		margin-bottom: 1rem;
 		display: flex;
 		flex-direction: column-reverse;
+		transition:height 200ms;
 		@include tablet(){
 			margin-bottom:2.25rem;
 		}
@@ -348,6 +443,9 @@
 				flex-direction: row;
 				border-top: 0.0625rem solid $mercury;
 				margin-top: 1rem;
+				animation-name: inputMove;
+				animation-duration: 550ms;
+				animation-timing-function: cubic-bezier(0.31,-0.48, 0.52, 1.18);
 				@include tablet(){
 					margin-top:	2.25rem;
 				}
