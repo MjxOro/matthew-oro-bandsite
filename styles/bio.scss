@@ -444,7 +444,7 @@
 				border-top: 0.0625rem solid $mercury;
 				margin-top: 1rem;
 				animation-name: inputMove;
-				animation-duration: 550ms;
+				animation-duration: 250ms;
 				animation-timing-function: cubic-bezier(0.31,-0.48, 0.52, 1.18);
 				@include tablet(){
 					margin-top:	2.25rem;
@@ -461,6 +461,7 @@
 			
 					&__cont{
 						flex-grow: 1;
+
 						&__user{
 								display:flex;
 								justify-content: space-between;
@@ -488,6 +489,29 @@
 								margin-bottom: 2rem;
 								@include dtBodyCopy();
 							}
+						}
+
+						& .chat__post__cont__bot{
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							
+							&__like{
+								display:flex;
+								&__count{
+									margin:0.25rem 0.25rem 0 0;
+								}
+							}
+							&__like-icon{
+								cursor:pointer;
+							}
+							&__delete{
+
+							}
+							&__delete-icon{
+								cursor: pointer;
+							}
+
 						}
 					}
 	}

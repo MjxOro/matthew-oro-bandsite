@@ -926,7 +926,7 @@ footer .ft__copyright {
   border-top: 0.0625rem solid #E1E1E1;
   margin-top: 1rem;
   animation-name: inputMove;
-  animation-duration: 550ms;
+  animation-duration: 250ms;
   animation-timing-function: cubic-bezier(0.31, -0.48, 0.52, 1.18);
 }
 @media (min-width: 768px) {
@@ -1001,6 +1001,23 @@ footer .ft__copyright {
     line-height: 1.375rem;
     font-weight: 400;
   }
+}
+.chat .chat__post-parent .chat__post .chat__post__cont__bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat .chat__post-parent .chat__post .chat__post__cont__bot__like {
+  display: flex;
+}
+.chat .chat__post-parent .chat__post .chat__post__cont__bot__like__count {
+  margin: 0.25rem 0.25rem 0 0;
+}
+.chat .chat__post-parent .chat__post .chat__post__cont__bot__like-icon {
+  cursor: pointer;
+}
+.chat .chat__post-parent .chat__post .chat__post__cont__bot__delete-icon {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=bio.css.map */
