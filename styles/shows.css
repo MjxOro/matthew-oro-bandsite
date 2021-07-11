@@ -358,13 +358,13 @@ footer .ft__copyright {
   background-position: center;
   background-repeat: no-repeat;
   max-width: 100%;
-  height: 25%;
+  height: 30%;
   max-width: 100%;
   position: relative;
 }
 @media (min-width: 768px) {
   .hero {
-    height: 50%;
+    height: 60%;
   }
 }
 @media (min-width: 1280px) {
@@ -463,6 +463,11 @@ footer .ft__copyright {
   }
 }
 @media (min-width: 768px) {
+  .show__container:first-child {
+    border: none;
+  }
+}
+@media (min-width: 768px) {
   .show__container:nth-child(n+2) .show__container__info-top {
     font-size: 0;
     padding: 1rem 0;
@@ -532,6 +537,8 @@ footer .ft__copyright {
   outline: none;
   cursor: pointer;
   margin-bottom: 1rem;
+  outline: none;
+  border: none;
 }
 @media (min-width: 768px) {
   .show__container__btn {
