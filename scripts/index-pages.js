@@ -214,7 +214,6 @@ const displayComment = function(){
 						axios.put(`${url}comments/${e.target.id}/like/?api_key=${apiKey}`,{likes: this.likes+1})
 						.then(resolve =>{
 							displayNewComment();
-							console.log(resolve);
 						})
 					}
 					if(e.target.className === 'chat__post__cont__bot__delete-icon'){
@@ -223,7 +222,6 @@ const displayComment = function(){
 						.then(resolve =>{
 							console.log('clicked')
 							displayNewComment();
-							console.log(resolve);
 						})
 
 					}
