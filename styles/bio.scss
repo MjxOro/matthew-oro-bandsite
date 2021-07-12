@@ -1,89 +1,10 @@
 @use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use './partials/fonts';
 @use './partials/globals';
 @use './partials/header';
 @use './partials/footer';
 
-@keyframes inputWrong {
-    0% {
-        transform: translateX(0.25rem);
-    }
-    25% {
-        transform: translateX(-0.25rem);
-    }
-    50% {
-        transform: translateX(0.25rem);
-    }
-    75% {
-        transform: translateX(-0.25rem);
-    }
-    100% {
-        transform: translateX(0rem);
-    }
-	
-}
-
-@keyframes inputMove {
-    0% {
-        transform: translateY(-12rem);
-    }
-    10% {
-        transform: translateY(-11rem);
-    }
-    15% {
-        transform: translateY(-8.5rem);
-    }
-    20% {
-        transform: translateY(-5.5rem);
-    }
-    25% {
-        transform: translateY(-2.5rem);
-    }
-    30% {
-        transform: translateY(-0rem);
-    }
-    35% {
-        transform: translateY(0rem);
-    }
-    40% {
-        transform: translateY(0rem);
-    }
-    45% {
-        transform: translateY(-2rem);
-    }
-    50% {
-        transform: translateY(-2.5rem);
-    }
-    55% {
-        transform: translateY(-2.5rem);
-    }
-    60% {
-        transform: translateY(-2.3rem);
-    }
-    65% {
-        transform: translateY(-1rem);
-    }
-    70% {
-        transform: translateY(0rem);
-    }
-    75% {
-        transform: translateY(0rem);
-    }
-    80% {
-        transform: translateY(-0.5rem);
-    }
-    85% {
-        transform: translateY(-0.85rem);
-    }
-    90% {
-        transform: translateY(-1rem);
-    }
-    95% {
-        transform: translateY(-1rem);
-    }
-    100% {
-        transform: translateY(0rem);
-    }
-}
 //styles
 .hero{
 	box-sizing: border-box; background-image: url("../assets/Images/hero-bio.jpg");
